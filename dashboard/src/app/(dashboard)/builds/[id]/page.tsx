@@ -91,8 +91,13 @@ export default function BuildDetailPage({ params }: BuildDetailPageProps) {
     .replace(/\.git$/, '')
 
   const isActive = !['success', 'failed'].includes(build.status)
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL ?? ''
+  const baseUrl = apiUrl.startsWith('http')
+    ? apiUrl
+    : `${typeof window !== 'undefined' ? window.location.origin : ''}${apiUrl}`
+
   const downloadUrl = build.apkUrl
-    ? `${typeof window !== 'undefined' ? window.location.origin : ''}${process.env.NEXT_PUBLIC_API_URL ?? ''}${build.apkUrl}`
+    ? `${baseUrl.replace(/\/$/, '')}${build.apkUrl.startsWith('/') ? '' : '/'}${build.apkUrl}`
     : null
 
   const handleCopyLink = () => {
