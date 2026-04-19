@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
+import { useRouter, redirect } from 'next/navigation'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
@@ -35,6 +35,11 @@ const registerSchema = z
 type RegisterValues = z.infer<typeof registerSchema>
 
 export default function RegisterPage() {
+  // Registration is disabled for now - redirect to login
+  if (typeof window !== 'undefined' || true) {
+    redirect('/login')
+  }
+
   const { login } = useAuth()
   const router = useRouter()
   const [isLoading, setIsLoading] = useState(false)

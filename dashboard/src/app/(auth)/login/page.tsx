@@ -110,6 +110,7 @@ export default function LoginPage() {
             </Button>
           </form>
 
+          {/* Registration closed
           <div className="mt-6 text-center text-sm text-muted-foreground">
             Don&apos;t have an account?{' '}
             <Link
@@ -119,6 +120,7 @@ export default function LoginPage() {
               Create account
             </Link>
           </div>
+          */}
         </CardContent>
       </Card>
     </div>
