@@ -19,7 +19,25 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: 'UploadDoc Expo Server',
   description:
-    'Self-hosted Android build service for Expo projects — queue, build, and download APKs.',
+    'Self-hosted Android build service for Expo projects. Seamlessly queue, build, and download APKs for your applications natively. Elevate your development pipeline.',
+  keywords: ['Expo', 'Android', 'Build Service', 'React Native', 'APK', 'UploadDoc'],
+  openGraph: {
+    title: 'UploadDoc Expo Server',
+    description: 'Self-hosted Android build service for Expo projects. Seamlessly queue, build, and download APKs for your applications natively.',
+    type: 'website',
+    siteName: 'UploadDoc Expo Server',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'UploadDoc Expo Server',
+    description: 'Self-hosted Android build service for Expo projects. Seamlessly queue, build, and download APKs.',
+  },
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon-16x16.png',
+    apple: '/apple-touch-icon.png',
+  },
+  manifest: '/site.webmanifest',
 }
 
 export default function RootLayout({
