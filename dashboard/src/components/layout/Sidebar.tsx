@@ -33,6 +33,7 @@ export default function Sidebar() {
 						alt="UploadDoc Logo"
 						width={32}
 						height={32}
+                        className="h-full w-full object-contain"
 					/>
 				</div>
 				<div className="flex flex-col leading-tight">
