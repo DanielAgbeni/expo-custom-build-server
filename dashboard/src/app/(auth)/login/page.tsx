@@ -78,7 +78,7 @@ export default function LoginPage() {
               />
               {errors.email && (
                 <p className="text-sm text-destructive">
-                  {errors.email.message}
+                  {errors.email?.message as string}
                 </p>
               )}
             </div>
@@ -94,7 +94,7 @@ export default function LoginPage() {
               />
               {errors.password && (
                 <p className="text-sm text-destructive">
-                  {errors.password.message}
+                  {errors.password?.message as string}
                 </p>
               )}
             </div>
