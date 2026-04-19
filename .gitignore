@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+dashboard/node_modules/
+
+# Build output
+dist/
+dashboard/.next/
+dashboard/out/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+
+# Builds artifacts
+/builds/
+*.apk
+
+# Uploaded zips (temp)
+/uploads/
+
+# TypeScript cache
+*.tsbuildinfo
